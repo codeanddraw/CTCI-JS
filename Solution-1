@@ -1,0 +1,17 @@
+Solution 1
+
+const isUnique = function(str){
+str.toLowerCase();
+/*Create a boolean array for 128 ASCII characters*/
+  let list = new Array(128).fill(false);
+  for(let i = 0; i < str.length; i++){
+  let val = str.charAt(i)
+    if(list[val])
+      return false;
+     else list[val] = true;
+  }
+  return true;
+}
+
+console.log(isUnique("unique"))
+//output: false
